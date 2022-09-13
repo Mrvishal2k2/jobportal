@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/295/295128.png">
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
 
@@ -12,13 +17,13 @@
     <!-- Custom styles for this template -->
     <link href="assets/styles/css/signin.css" rel="stylesheet">
     
-    <title>Register</title>
+
 </head>
 <body class="text-center>
     <div class="container">
     <main class="form-signin">
     <form>
-    <img class="mb-4" src="assets/images/site-logo.svg" alt="" width="72" height="57">
+    <img class="mb-4" src=" https://cdn-icons-png.flaticon.com/512/863/863823.png" alt="" width="72" height="77">
     <h1 class="h3 mb-3 fw-normal">Register</h1>
 
     <div class="form-floating">

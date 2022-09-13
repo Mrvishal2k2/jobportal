@@ -9,7 +9,13 @@
     <!-- Bootstrap core CSS -->
     <link href="/assets/styles/css/bootstrap.min.css" rel="stylesheet">
     <script src="/assets/styles/js/bootstrap.bundle.min.js"></script>
+    <!-- Source https://unsplash.com/photos/RYyr-k3Ysqg -->
     <style>
+
+body{
+  background-image: url('/assets/images/adminbackground.jpg');
+  background-size:cover;
+}
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -31,6 +37,15 @@ body {
   margin-bottom: 20px;
 }
 
+
+img {
+                width:100%;
+                height:100%;
+                object-fit: cover;
+            }
+            
+
+
 </style>
 </head>
 <body>
@@ -47,17 +62,53 @@ body {
       <div class="collapse navbar-collapse" id="navbarsExample01">
         <ul class="navbar-nav me-auto mb-2">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+            <a class="nav-link active" aria-current="page" href="../">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./jobs.php">Jobs</a>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="./candidates.php">Applied Candidates</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 </main>
+
+
+
+<div class="container-fluid row">
+
+<div class="col-sm-6">
+  <img src="/assets/images/admin.jpg" alt="Admin">
+  </div>
+
+
+  <div class="col-sm-6">
+    <br>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Post a Job</h5>
+        <p class="card-text">Post your free job in minutes.<br> Make a great hire fast!</p>
+        <a href="jobs.php" class="btn btn-primary">Post Now</a>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Applied Candidates</h5>
+        <p class="card-text">Checkout who applied for Job Roles</p>
+        <a href="candidates.php" class="btn btn-primary">Check Candidates</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 </body>
 </html> 
