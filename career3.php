@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,23 +14,12 @@
     <link href="assets/styles/css/bootstrap.min.css" rel="stylesheet">
     <script src="assets/styles/js/bootstrap.bundle.min.js"></script>
 
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <style>
 
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
 
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
+
 body {
   padding-bottom: 20px;
 }
@@ -41,21 +29,18 @@ body {
 }
 .col-sm-6{flex:0 0 auto;width:auto} 
 
-.banner{    
-  background-image: url('/assets/images/careerpage.jpg');
-  background-size:cover;}
 
-  .MultiCarousel { float: right; overflow: hidden; padding: 100px; width: 100%; position:relative; }
-    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: right; }
-        .MultiCarousel .MultiCarousel-inner .item { float: right;}
+
+.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left;}
         .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
     .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
     .MultiCarousel .leftLst { left:0; }
     .MultiCarousel .rightLst { right:0; }
     
         .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
-
-        .pad15 {
+.pad15 {
   margin: 0 0.5em;
   box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
   border: none;
@@ -66,9 +51,9 @@ body {
 }
 </style>
 
-<script>
 
-$(document).ready(function () {
+<script>
+    $(document).ready(function () {
     var itemsMainDiv = ('.MultiCarousel');
     var itemsDiv = ('.MultiCarousel-inner');
     var itemWidth = "";
@@ -176,13 +161,8 @@ $(document).ready(function () {
 });
 </script>
 
-
 </head>
 
-
-<body>
-
-<main>
 
 <nav class="navbar navbar-dark" aria-label="NavBar">
     <div class="container-fluid">
@@ -204,23 +184,31 @@ $(document).ready(function () {
 
   </nav>
 
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1>Apply Today</h1>
-    <p>Start applying for various jobs suiting your profile...</p>
-  </div>
+  
+<body>
+    
+
+
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1>Apply Today</h1>
+        <p>Start applying for various jobs suiting your profile...</p>
+    </div>
 </div>
 
-</main>
+<div class="container-fluid row">
+
+    <div class="col-sm-6">
+        <div>
+           <img src="/assets/images/portalimg.jpg" alt="JobPortal" width=100% class="">
+        </div>
+    </div>
+
+<div class="col-sm-5">
 
 
-<div class="container-fluid ">
-
-<div style="float:left; position:absolute;"><img src="/assets/images/portalimg.jpg" alt="JobPortal"  class="col-sm-6"></div>
-</div>
-<div class="container" style="position:right;">
-	<div class="row">
-		<div class="MultiCarousel" data-items="1,3,5,2" data-slide="1" id="MultiCarousel"  data-interval="1000">
+<div class="MultiCarousel" data-items="1,3,5,2" data-slide="1" id="MultiCarousel"  data-interval="1000">
             <div class="MultiCarousel-inner">
                 <div class="item">
                     <div class="pad15">
@@ -228,11 +216,18 @@ $(document).ready(function () {
                         <p>₹ 1</p>
                         <p>₹ 6000</p>
                         <p>50% off</p>
-                        <a href="" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-
-
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
                 <div class="item">
                     <div class="pad15">
                         <p class="lead">Multi Item Carousel</p>
@@ -257,25 +252,120 @@ $(document).ready(function () {
                         <p>₹ 1</p>
                         <p>₹ 6000</p>
                         <p>50% off</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Multi Item Carousel</p>
+                        <p>₹ 1</p>
+                        <p>₹ 6000</p>
+                        <p>50% off</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>
             <button class="btn btn-primary leftLst"><</button>
             <button class="btn btn-primary rightLst">></button>
-        </div>
-	</div>
 
 
 
 
+</div>
 
 
 
-
-
+</div>
 
 
 </body>
-
-</html>
