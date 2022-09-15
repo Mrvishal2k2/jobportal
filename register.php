@@ -27,27 +27,27 @@
     <h1 class="h3 mb-3 fw-normal">Register</h1>
 
     <div class="form-floating">
-      <input type="text" class="form-control" id="floatingInput" placeholder="Me">
+      <input type="text" class="form-control" id="fullname" placeholder="Me">
       <label for="floatingName">Full Name</label>
     </div>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="email" class="form-control" id="emailaddress" placeholder="name@example.com">
       <label for="floatingInput">Email address</label>
     </div>
 
     <div class="form-floating">
-      <input type="number" class="form-control" id="floatingInput" placeholder="9876543210">
+      <input type="number" class="form-control" id="phoneno" placeholder="9876543210">
       <label for="floatingName">Phone Number</label>
     </div>
 
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" id="usrpassword" placeholder="Password">
       <label for="floatingPassword1">Password</label>
     </div>
 
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" id="usrpassword2" placeholder="Password">
       <label for="floatingPassword2">Re-enter Password</label>
     </div>
 

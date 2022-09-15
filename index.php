@@ -1,14 +1,24 @@
+<!-- 
+  Copyright 2022
+  Vishal R
+  @MrVishal2k2 
+  mrvishal2k2@pm.me
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Never Too Late Start Posting for Jobs or start applying for jobs">
+    <meta name="keywords" content="job, job portal, apply job, post a job">
+
     <title>JobPortal</title>
     <link rel="icon" type="image/x-icon" href="favicon.svg">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS and JS-->
     <link href="assets/styles/css/bootstrap.min.css" rel="stylesheet">
     <script src="assets/styles/js/bootstrap.bundle.min.js"></script>
 

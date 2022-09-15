@@ -10,12 +10,11 @@
     <link href="/assets/styles/css/bootstrap.min.css" rel="stylesheet">
     <script src="/assets/styles/js/bootstrap.bundle.min.js"></script>
     <!-- Source https://unsplash.com/photos/RYyr-k3Ysqg -->
+    <!-- body{background-image: url('/assets/images/adminbackground.jpg');background-size:cover;} -->
+
     <style>
 
-body{
-  background-image: url('/assets/images/adminbackground.jpg');
-  background-size:cover;
-}
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -39,22 +38,35 @@ body {
 
 
 img {
-                width:100%;
-                height:100%;
-                object-fit: cover;
-            }
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
             
 
+body{
+  background-color:#d2d6d7;
+}
 
+
+.collapse {
+  &:not(.show) {
+    display: none;
+  }
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  @include transition($transition-collapse);
+}
 </style>
 </head>
 <body>
     
-
-<main>
   <nav class="navbar navbar-dark" aria-label="First navbar example">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Admin Dashboard</a>
+      <a class="navbar-brand" href="#">   Admin Dashboard</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -62,17 +74,15 @@ img {
       <div class="collapse navbar-collapse" id="navbarsExample01">
         <ul class="navbar-nav me-auto mb-2">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+            <a class="nav-link active" aria-current="page" href="../admin">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./jobs.php">Jobs</a>
+            <a class="nav-link active" href="./jobs.php">Jobs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./candidates.php">Applied Candidates</a>
+            <a class="nav-link active" href="./candidates.php">Applied Candidates</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-</main>
-
