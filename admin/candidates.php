@@ -1,6 +1,6 @@
 
 <?php include 'header.php'?>
-
+<?php include '../config.php'?>
 <style>
 .pad15 {
   margin: 0 0.5em;
@@ -35,29 +35,33 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
+      <th scope="col">Email</th>
       <th scope="col">Position</th>
+      <th scope="col">Qualification</th>
+      <th scope="col">PassOutYear</th>
       <th scope="col">Resume</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Vishal</td>
-      <td>Software Tester</td>
-      <td>7LPA</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Infosys</td>
-      <td>Web Developer</td>
-      <td>10LPA</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Accenture</td>
-      <td>Graphic designer</td>
-      <td>30LPA</td>
-    </tr>
+    <?php
+    $sql = "SELECT * FROM `candidates`";
+    $result = mysqli_query($conn, $sql);
+    $sno = 0;
+    while($row = mysqli_fetch_assoc($result)){
+        $sno = $sno + 1;
+        echo "<tr>
+        <th scope='row'>" . $sno . "</th>
+        <td>" . $row['name'] . "</td>
+        <td>" . $row['email'] . "</td>
+        <td>" . $row['jobpost'] . "</td>
+        <td>" . $row['qual'] . "</td>
+        <td>" . $row['year'] . "</td>
+        <td><a href='" . $row['resume'] . "' target='_blank'>View Resume</a></td>
+      </tr>";
+    }
+    ?>
+
+
   </tbody>
 </table>
 </div>

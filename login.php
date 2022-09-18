@@ -1,3 +1,4 @@
+<?php include 'config.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,22 +21,22 @@
 <body class="text-center>
     <div class="container">
     <main class="form-signin">
-    <form>
+    <form method="Post">
     <img class="mb-4" src=" https://cdn-icons-png.flaticon.com/512/3711/3711310.png" alt="" width="62" height="57">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
+      <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
+      <label for="EMAIL">Email address</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Password</label>
+      <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+      <label for="Password">Password</label>
     </div>
     
     <div class="blank"></div>
 
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+    <button class="w-100 btn btn-lg btn-primary" name="login" type="submit">Login</button>
     <hr>
     <p style="text-align: center;"> <b>New User?  </b> <a href="register.php">Register</a> </p>
     <p class="mt-5 mb-3 text-muted">&copy;  MRVISHAL2K2 2022</p>

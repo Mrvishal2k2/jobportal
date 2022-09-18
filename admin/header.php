@@ -1,3 +1,5 @@
+
+<?php include '../config.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,7 @@
     <script src="/assets/styles/js/bootstrap.bundle.min.js"></script>
     <!-- Source https://unsplash.com/photos/RYyr-k3Ysqg -->
     <!-- body{background-image: url('/assets/images/adminbackground.jpg');background-size:cover;} -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
 
 

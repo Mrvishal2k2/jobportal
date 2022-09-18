@@ -1,3 +1,4 @@
+<?php include 'config.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +13,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
     <link href="assets/styles/css/bootstrap.min.css" rel="stylesheet">
-    <script src="assets/styles/js/bootstrap.bundle.min.js"></script>
-
-    <script src="assets/styles/js/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>    <script src="assets/styles/js/jquery-3.6.1.min.js"></script>
 
     <style>
 
@@ -31,7 +31,7 @@ body {
 
 
 
-.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+.MultiCarousel { float: left; overflow: hidden; padding: auto; width: 100%; position:relative; }
     .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
         .MultiCarousel .MultiCarousel-inner .item { float: left;}
         .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
@@ -49,11 +49,17 @@ body {
 .wtf{
     float: right;
 }
-.mycol{flex:0 0 auto;height:50%; width:50%}
+.mycol{flex:0 0 auto;height:auto; width:50%}
+.mycol2{flex:0 0 auto;height:auto; width:auto}
 </style>
 
 
 <script>
+
+
+
+
+
     $(document).ready(function () {
     var itemsMainDiv = ('.MultiCarousel');
     var itemsDiv = ('.MultiCarousel-inner');
@@ -160,8 +166,31 @@ body {
     }
 
 });
+
+
 </script>
 
+
+
+
+<script>
+    var exampleModal = document.getElementById('exampleModal')
+exampleModal.addEventListener('show.bs.modal', function (event) {
+  // Button that triggered the modal
+  var button = event.relatedTarget
+  // Extract info from data-bs-* attributes
+  var recipient = button.getAttribute('data-bs-whatever')
+  // If necessary, you could initiate an AJAX request here
+  // and then do the updating in a callback.
+  //
+  // Update the modal's content.
+  var modalTitle = exampleModal.querySelector('.modal-title')
+  var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+  modalTitle.textContent = 'New message to ' + recipient
+  modalBodyInput.value = recipient
+})
+</script>
 </head>
 
 
@@ -207,166 +236,94 @@ body {
     </div>
 
 <div class="mycol">
+<div class="slidecards">
+    <?php
 
+    $sql = "SELECT * FROM jobposts";
+    $result = mysqli_query($conn, $sql);
+    if($result->num_rows>0){
+        echo "<div class='MultiCarousel' data-items='1,3,5,1' data-slide='1' id='MultiCarousel'  data-interval='1000'>
+        <div class='MultiCarousel-inner'>";
+    $sno = 0;
+    while($row = mysqli_fetch_assoc($result)){
+    $sno = $sno + 1;
+      echo "<div class='item'>
+                <div class='pad15'>
+                    <h3 ><b>". $row['position'] . "</b></h3>
+                    <p>". $row['companyname'] . "</p>
+                    <p>". $row['description'] . "</p>
+                    <p>Skills: ". $row['skills'] . "</p>
+                    <p>CTC: ". $row['ctc'] . "</p>
+                    <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal' data-bs-whatever='VISHAL'>Apply</button>
+                </div>
+            </div>";
+    } // end of while loop
+echo "</div>
+<button class='btn btn-primary leftLst'><</button>
+<button class='btn btn-primary rightLst'>></button></div>";
+// end of if loop
 
-<div class="MultiCarousel" data-items="1,3,5,2" data-slide="1" id="MultiCarousel"  data-interval="1000">
-            <div class="MultiCarousel-inner">
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pad15">
-                        <p class="lead">Multi Item Carousel</p>
-                        <p>₹ 1</p>
-                        <p>₹ 6000</p>
-                        <p>50% off</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <button class="btn btn-primary leftLst"><</button>
-            <button class="btn btn-primary rightLst">></button>
+}else{
+
+    echo "<div class='item'>
+        <div class=''>
+            <h3 ><b>No JOBS POSTED</b></h3>
+            <p>Keep visiting us to get recent updates</p>
+        </div>
+    </div>";
+
+}
+?>
 
 
 
-
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="Post">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Name:</label>
+            <input type="text" class="form-control" name="name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Email:</label>
+            <input type="email" class="form-control" name="email">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Applying for:</label>
+            <input type="text" class="form-control" name="jobpost">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Resume Url:</label>
+            <input type="text" class="form-control" name="resume" ria-describedby="resumehelp">
+            <div id="resumehelp" class="form-text">Gdrive Link to your resume.</div>
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Qualification:</label>
+            <input type="text" class="form-control" name="qual">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Year of Passout:</label>
+            <input type="text" class="form-control" name="year">
+          </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" name="applyjob" class="btn btn-primary">Apply</button>
+      </div>
+    </div>
+    </form>
+  </div>
 </div>
 
-
-
-</div>
 
 
 </body>
+
+</html>

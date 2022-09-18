@@ -1,6 +1,7 @@
 
 <?php include 'header.php'?>
 
+
 <style>
 .pad15 {
   margin: 0 0.5em;
@@ -24,28 +25,33 @@
   <div class="card card-body">
 
     <!-- Form -->
-    <form>
+    <form method="Post">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Company Name</label>
-    <input type="text" class="form-control" id="companyname">
+    <label for="Cname" class="form-label">Company Name</label>
+    <input type="text" name="companyname" class="form-control">
     </div>
 
     <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Position</label>
-    <input type="text" class="form-control" id="position">
+    <label for="Position" class="form-label">Position</label>
+    <input type="text" name="position" class="form-control">
     </div>
 
     <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Job Description</label>
-    <input type="text" class="form-control" id="jobdescription">
+    <label for="description" class="form-label">Job Description</label>
+    <input type="text" name="description" class="form-control">
     </div>
 
     <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">CTC</label>
-    <input type="text" class="form-control" id="ctc">
+    <label for="Skills" class="form-label">Skills</label>
+    <input type="text" name="skills" class="form-control">
     </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="mb-3">
+    <label for="CTC" class="form-label">CTC</label>
+    <input type="text" name="ctc" class="form-control">
+    </div>
+
+  <button type="submit" name="postjob" class="btn btn-primary">Submit</button>
 </form>
 
 
@@ -62,28 +68,34 @@
       <th scope="col">#</th>
       <th scope="col">Company Name</th>
       <th scope="col">Position</th>
+      <th scope="col">Description</th>
+      <th scope="col">Skills</th>
       <th scope="col">CTC</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>TCS</td>
-      <td>Software Tester</td>
-      <td>7LPA</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Infosys</td>
-      <td>Web Developer</td>
-      <td>10LPA</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Accenture</td>
-      <td>Graphic designer</td>
-      <td>30LPA</td>
-    </tr>
+   <?php
+
+    $sql = "SELECT * FROM jobposts";
+    $result = mysqli_query($conn, $sql);
+    if($result->num_rows>0){
+    $sno = 0;
+    while($row = mysqli_fetch_assoc($result)){
+      echo "<tr>
+      <th scope='row'>". ++$sno . "</th>
+      <td>". $row['companyname'] . "</td>
+      <td>". $row['position'] . "</td>
+      <td>". $row['description'] . "</td>
+      <td>". $row['skills'] . "</td>
+      <td>". $row['ctc'] . "</td>
+    </tr>";
+    }
+  }else {
+    echo "";
+  }
+
+   ?>
+
   </tbody>
 </table>
 </div>

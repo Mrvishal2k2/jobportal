@@ -1,3 +1,4 @@
+<?php include 'config.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,38 +23,38 @@
 <body class="text-center>
     <div class="container">
     <main class="form-signin">
-    <form>
+    <form method="Post">
     <img class="mb-4" src=" https://cdn-icons-png.flaticon.com/512/863/863823.png" alt="" width="72" height="77">
     <h1 class="h3 mb-3 fw-normal">Register</h1>
 
     <div class="form-floating">
-      <input type="text" class="form-control" id="fullname" placeholder="Me">
-      <label for="floatingName">Full Name</label>
+      <input type="text" class="form-control" name="name" placeholder="Me">
+      <label for="Name">Full Name</label>
     </div>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="emailaddress" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
+      <input type="email" class="form-control" name="email" placeholder="name@example.com">
+      <label for="EMAIL">Email address</label>
     </div>
 
     <div class="form-floating">
-      <input type="number" class="form-control" id="phoneno" placeholder="9876543210">
-      <label for="floatingName">Phone Number</label>
+      <input type="number" class="form-control" name="phone_no" placeholder="9876543210">
+      <label for="Number">Phone Number</label>
     </div>
 
     <div class="form-floating">
-      <input type="password" class="form-control" id="usrpassword" placeholder="Password">
-      <label for="floatingPassword1">Password</label>
+      <input type="password" class="form-control" name="password" placeholder="Password">
+      <label for="Password1">Password</label>
     </div>
 
     <div class="form-floating">
-      <input type="password" class="form-control" id="usrpassword2" placeholder="Password">
-      <label for="floatingPassword2">Re-enter Password</label>
+      <input type="password" class="form-control" name="password2" placeholder="Password">
+      <label for="Password2">Re-enter Password</label>
     </div>
 
     <div class="blank"></div>
     
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Create Account</button>
+    <button class="w-100 btn btn-lg btn-primary" name="register" type="submit">Create Account</button>
     <hr>
     <p style="text-align: center;"> <b>Already User?</b> <a href="login.php">Login</a> </p>
     <p class="mt-5 mb-3 text-muted">&copy;  MRVISHAL2K2 2022</p>
