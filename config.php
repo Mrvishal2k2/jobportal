@@ -1,9 +1,9 @@
 <?php
 
-$server = "localhost";
-$user = "root";
-$password = "";
-$database = "jobs";
+$server = "sql5.freesqldatabase.com";
+$user = "sql5520037";
+$password = "BaxtpQAy7b";
+$database = "sql5520037";
 
 
 $conn = mysqli_connect($server, $user, $password, $database);
