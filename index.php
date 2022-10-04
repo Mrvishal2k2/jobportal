@@ -13,6 +13,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Never Too Late Start Posting for Jobs or start applying for jobs">
     <meta name="keywords" content="job, job portal, apply job, post a job">
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@MrVishal_2k2">
+    <meta name="twitter:title" content="JobPortal">
+    <meta name="twitter:description" content="A portal to find jobs!">
 
     <title>JobPortal</title>
     <link rel="icon" type="image/x-icon" href="favicon.svg">
